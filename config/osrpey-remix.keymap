@@ -47,7 +47,7 @@
 
             bindings = <
 &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp GRAVE
-&kp trans     &kp trans    &trans  &trans    &kp SQT    &kp DEL    &kp BACKSLASH  &kp COMMA    &kp SEMI     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
+&trans     &trans    &trans  &trans    &kp SQT    &kp DEL    &kp BACKSLASH  &kp COMMA    &kp SEMI     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
 &trans     &trans    &kp LEFT_WIN  &trans    &trans    &trans     &trans         &trans    &trans     &trans            &kp COMMA             &trans
                              &trans    &trans    &mo 3      &kp TAB         &trans    &trans
             >;
