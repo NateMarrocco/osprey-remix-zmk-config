@@ -7,7 +7,7 @@
     tapping-term-ms = <250>;
 };
 
-&{  // Only one root node
+ / {
     combos {
         compatible = "zmk,combos";
 
@@ -38,45 +38,4 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-        default_layer {
-            display-name = "Base";
-            bindings = <
-                &kp LC(Z) &kp Q  &kp W  &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BACKSPACE
-                &kp LSHIFT &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp F11 &alt_tab_macro
-                &kp LC(C) &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp SEMI &kp DOT &kp FSLH &kp LC(V)
-                               &kp ESCAPE &mo 2 &kp LCTRL &kp SPACE &mo 1 &kp ENTER
-            >;
-        };
-
-        lower_layer {
-            display-name = "Lower";
-            bindings = <
-                &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &kp GRAVE
-                &trans &trans &trans &trans &kp SQT &kp DEL &kp BACKSLASH &kp COMMA &kp SEMI &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp TILDE
-                &trans &trans &kp LEFT_WIN &trans &trans &trans &trans &trans &trans &trans &kp COMMA &trans
-                              &trans &trans &mo 3 &kp TAB &trans &trans
-            >;
-        };
-
-        raise_layer {
-            display-name = "Raise";
-            bindings = <
-                &kp ESCAPE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp BACKSPACE
-                &trans &kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &N9 &trans
-                &trans &trans &trans &kp UP_ARROW &kp DOWN_ARROW &trans &trans &trans &trans &trans &trans &trans
-                            &trans &trans &kp UNDER &mo 3 &trans &trans
-            >;
-        };
-
-        adjust_layer {
-            display-name = "Adjust";
-            bindings = <
-                &none &none &none &none &bootloader &none &bt BT_SEL 0 &kp UP &bt BT_SEL 2 &trans &trans &bt BT_CLR
-                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &LEFT &DOWN &RIGHT &none &none &none
-                &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &sys_reset &none &none &none &none
-                         &trans &trans &trans &trans &trans &trans
-            >;
-        };
-    };
-};
+        ...
