@@ -49,6 +49,13 @@
             bindings = <&kp SPACE>, <&kp ENTER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        
+        toggle_mouse_layer: toggle_mouse_layer {
+            compatible = "zmk,behavior-macro";
+            label = "TOGGLE_MOUSE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&kp F11>, <&tog 4>;
+        };
     };
     
     keymap {
@@ -58,7 +65,7 @@
             label = "Base";
             bindings = <
 &kp LC(Z)     &kp Q  &kp W  &kp E       &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P     &kp BACKSPACE
-&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &kp F11   &kp F20
+&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &toggle_mouse_layer   &kp F20
 &kp LC(C)     &kp Z  &kp X  &kp C       &kp V   &kp B   &kp N  &kp M  &kp SEMI &kp DOT &kp FSLH  &kp LC(V)
                             &kp ESCAPE  &control_alt_macro  &shift_space_to_enter  &mo 1   &kp LCTRL
             >;
@@ -91,6 +98,16 @@
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5       &kp F6   &kp LEFT      &kp DOWN    &kp RIGHT     &none   &none   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
                         &trans   &trans       &trans   &trans        &trans      &trans
+            >;
+        };
+        
+        mouse_layer {
+            label = "Mouse";
+            bindings = <
+&trans     &trans      &trans     &kp E        &trans     &trans     &trans     &trans     &kp I      &trans     &trans    &trans
+&trans     &kp F22     &kp F21    &trans       &trans     &trans     &trans     &kp J      &kp K      &kp L      &toggle_mouse_layer  &trans
+&trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
+                                  &trans       &trans     &trans     &trans     &trans     &kp D
             >;
         };
     };
