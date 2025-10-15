@@ -7,23 +7,20 @@
     tapping-term-ms = <250>;
 };
 
-&control_alt {
-    compatible = "zmk,behavior-modifiers";
-    label = "Control+Alt";
-    mods = <MOD_LCTRL MOD_LALT>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
+        
         print_screen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <25 26 27>;
         };
+        
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <18 19>;
         };
+        
         minus2 {
             bindings = <&kp MINUS>;
             key-positions = <17 16>;
@@ -31,11 +28,26 @@
     };
     
     behaviors {
+        control_alt_macro: control_alt_macro {
+            compatible = "zmk,behavior-macro";
+            label = "CONTROL_ALT";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(SPACE))>;
+        };
+        
         alt_tab_macro: alt_tab_macro {
             compatible = "zmk,behavior-macro";
             label = "ALT_TAB_MACRO";
             #binding-cells = <0>;
             bindings = <&kp LA(TAB)>;
+        };
+        
+        shift_space_to_enter: shift_space_to_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_SPACE_TO_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
     
@@ -43,87 +55,27 @@
         compatible = "zmk,keymap";
         
         default_layer {
-            display-name = "Base";
+            label = "Base";
             bindings = <
-&kp LC(Z)    &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y        &kp U                &kp I             &kp O    &kp P     &kp BACKSPACE
-&kp LSHIFT    &kp A  &kp S  &kp D         &kp F         &kp G        &kp H        &kp J                &kp K             &kp L    &kp F11  &kp F20
-&kp LC(C)  &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N        &kp M  &kp SEMI         &kp DOT  &kp FSLH  &kp LC(V)
-                         &kp ESCAPE  &control_alt           &kp SPACE  &mo 1     &kp LCTRL
-            >;
-        };efffu#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-
-&mt {
-    flavor = "balanced";
-    tapping-term-ms = <250>;
-};
-
-&control_alt {
-    compatible = "zmk,behavior-modifiers";
-    label = "Control+Alt";
-    mods = <MOD_LCTRL MOD_LALT>;
-};
-
-&shift_space_to_enter: shift_space_to_enter {
-    compatible = "zmk,behavior-mod-morph";
-    label = "SHIFT_SPACE_TO_ENTER";
-    base_key = <&kp SPACE>;
-    morph_modifiers = <MOD_LSHIFT>;
-    morph_key = <&kp ENTER>;
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        print_screen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <25 26 27>;
-        };
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <18 19>;
-        };
-        minus2 {
-            bindings = <&kp MINUS>;
-            key-positions = <17 16>;
-        };
-    };
-    
-    behaviors {
-        alt_tab_macro: alt_tab_macro {
-            compatible = "zmk,behavior-macro";
-            label = "ALT_TAB_MACRO";
-            #binding-cells = <0>;
-            bindings = <&kp LA(TAB)>;
-        };
-    };
-    
-    keymap {
-        compatible = "zmk,keymap";
-        
-        default_layer {
-            display-name = "Base";
-            bindings = <
-&kp LC(Z)    &kp Q  &kp W  &kp E         &kp R         &kp T        &kp Y        &kp U                &kp I             &kp O    &kp P     &kp BACKSPACE
-&kp LSHIFT    &kp A  &kp S  &kp D         &kp F         &kp G        &kp H        &kp J                &kp K             &kp L    &kp F11  &kp F20
-&kp LC(C)  &kp Z  &kp X  &kp C         &kp V         &kp B        &kp N        &kp M  &kp SEMI         &kp DOT  &kp FSLH  &kp LC(V)
-                         &kp ESCAPE  &control_alt           &shift_space_to_enter  &mo 1     &kp LCTRL
+&kp LC(Z)     &kp Q  &kp W  &kp E       &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P     &kp BACKSPACE
+&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &kp F11   &kp F20
+&kp LC(C)     &kp Z  &kp X  &kp C       &kp V   &kp B   &kp N  &kp M  &kp SEMI &kp DOT &kp FSLH  &kp LC(V)
+                            &kp ESCAPE  &control_alt_macro  &shift_space_to_enter  &mo 1   &kp LCTRL
             >;
         };
         
         lower_layer {
-            display-name = "Lower";
+            label = "Lower";
             bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp GRAVE
-&trans     &trans    &trans  &trans    &kp SQT    &kp DEL    &kp BACKSLASH  &kp COMMA    &kp SEMI     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
-&trans     &trans    &kp LEFT_WIN  &trans    &trans    &trans     &trans         &trans    &trans     &trans            &kp COMMA             &trans
-                             &trans    &trans    &mo 3      &kp TAB         &trans    &trans
+&kp GRAVE  &kp EXCL  &kp AT   &kp HASH  &kp DLLR   &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp GRAVE
+&trans     &trans    &trans   &trans    &kp SQT    &kp DEL    &kp BACKSLASH  &kp COMMA &kp SEMI   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
+&trans     &trans    &kp LGUI &trans    &trans     &trans     &trans         &trans    &trans     &trans            &kp COMMA          &trans
+                              &trans    &trans     &mo 3      &kp TAB        &trans    &trans
             >;
         };
         
         raise_layer {
-            display-name = "Raise";
+            label = "Raise";
             bindings = <
 &kp ESCAPE  &kp N1  &kp N2  &kp N3        &kp N4          &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE
 &trans      &kp N0  &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &trans
@@ -133,40 +85,7 @@
         };
         
         adjust_layer {
-            display-name = "Adjust";
-            bindings = <
-&none   &none   &none   &none    &bootloader  &none    &bt BT_SEL 0  &kp UP      &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5       &kp F6   &kp LEFT      &kp DOWN    &kp RIGHT     &none   &none   &none
-&kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
-                        &trans   &trans       &trans   &trans        &trans      &trans
-            >;
-        };
-    };
-};
-
-        
-        lower_layer {
-            display-name = "Lower";
-            bindings = <
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp GRAVE
-&trans     &trans    &trans  &trans    &kp SQT    &kp DEL    &kp BACKSLASH  &kp COMMA    &kp SEMI     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp TILDE
-&trans     &trans    &kp LEFT_WIN  &trans    &trans    &trans     &trans         &trans    &trans     &trans            &kp COMMA             &trans
-                             &trans    &trans    &mo 3      &kp TAB         &trans    &trans
-            >;
-        };
-        
-        raise_layer {
-            display-name = "Raise";
-            bindings = <
-&kp ESCAPE  &kp N1  &kp N2  &kp N3        &kp N4          &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE
-&trans      &kp N0  &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &trans
-&trans      &trans  &trans  &kp UP_ARROW  &kp DOWN_ARROW  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans        &trans          &kp UNDER   &mo 3   &trans  &trans
-            >;
-        };
-        
-        adjust_layer {
-            display-name = "Adjust";
+            label = "Adjust";
             bindings = <
 &none   &none   &none   &none    &bootloader  &none    &bt BT_SEL 0  &kp UP      &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
 &kp F1  &kp F2  &kp F3  &kp F4   &kp F5       &kp F6   &kp LEFT      &kp DOWN    &kp RIGHT     &none   &none   &none
