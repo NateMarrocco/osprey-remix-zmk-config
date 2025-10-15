@@ -65,7 +65,7 @@
             label = "Base";
             bindings = <
 &kp LC(Z)     &kp Q  &kp W  &kp E       &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P     &kp BACKSPACE
-&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &toggle_mouse_layer   &kp F20
+&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &toggle_mouse_layer   &kp F20 // F20 Toggles window switching in komorai
 &kp LC(C)     &kp Z  &kp X  &kp C       &kp V   &kp B   &kp N  &kp M  &kp SEMI &kp DOT &kp FSLH  &kp LC(V)
                             &kp ESCAPE  &control_alt_macro  &shift_space_to_enter  &mo 1   &kp LCTRL
             >;
@@ -105,7 +105,7 @@
             label = "Mouse";
             bindings = <
 &trans     &trans      &trans     &kp E        &trans     &trans     &trans     &trans     &kp I      &trans     &trans    &trans
-&trans     &kp F22     &kp F21    &trans       &trans     &trans     &trans     &kp J      &kp K      &kp L      &toggle_mouse_layer  &trans
+&trans     &kp F22     &kp F21    &trans       &trans     &trans     &trans     &kp J      &kp K      &kp L      &toggle_mouse_layer  &trans //F21 is going to be flow launcher hints
 &trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
                                   &trans       &trans     &trans     &trans     &trans     &kp D
             >;
