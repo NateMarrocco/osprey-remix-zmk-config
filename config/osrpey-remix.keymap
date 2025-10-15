@@ -68,7 +68,7 @@
 &kp LC(Z)     &kp Q  &kp W  &kp E       &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P     &kp BACKSPACE
 &kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &toggle_mouse_layer   &kp F20 // F20 Toggles window switching in komorai
 &kp LC(C)     &kp Z  &kp X  &kp C       &kp V   &kp B   &kp N  &kp M  &kp SEMI &kp DOT &kp FSLH  &kp LC(V)
-                            &kp ESCAPE  &control_alt_macro  &shift_space_to_enter  &mo 1   &kp LCTRL
+                            &kp ESCAPE  &kp LC(LALT)  &shift_space_to_enter  &mo 1   &kp LCTRL
             >;
         };
         
