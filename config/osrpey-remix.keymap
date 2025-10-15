@@ -32,8 +32,9 @@
             compatible = "zmk,behavior-macro";
             label = "CONTROL_ALT";
             #binding-cells = <0>;
-            bindings = <&kp LC(LA(SPACE))>;
+            bindings = <&kp LCTRL>, <&kp LALT>;
         };
+
         
         alt_tab_macro: alt_tab_macro {
             compatible = "zmk,behavior-macro";
