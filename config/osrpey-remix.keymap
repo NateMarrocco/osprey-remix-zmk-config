@@ -61,7 +61,7 @@
     
     keymap {
         compatible = "zmk,keymap";
-        
+        // TODO add tab key so that u can tab throuh dialhuge
         default_layer {
             label = "Base";
             bindings = <
