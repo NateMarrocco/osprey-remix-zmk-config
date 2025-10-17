@@ -66,7 +66,7 @@
             label = "Base";
             bindings = <
 &kp LC(Z)     &kp Q  &kp W  &kp E       &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P     &kp BACKSPACE
-&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &toggle_mouse_layer   &kp F20 // F20 Toggles window switching in komorai
+&kp LSHIFT    &kp A  &kp S  &kp D       &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &F23  &kp F20 // F20 Toggles window switching in komorai F23 toggles mouse
 &kp LC(C)     &kp Z  &kp X  &kp C       &kp V   &kp B   &kp N  &kp M  &kp SEMI &kp DOT &kp FSLH  &kp LC(V)
                             &kp ESCAPE  &kp LC(LALT) &mo 2 &kp LCTRL &kp SPACE  &mo 1   
             >;
