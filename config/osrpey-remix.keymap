@@ -76,7 +76,7 @@
             label = "Lower";
             bindings = <
 &kp GRAVE  &kp LC(1)  &kp LC(2)   &kp LC(3)  &kp LC(4)   &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp ESCAPE
-&trans     &kp LC(LALT(A))    &kp LC(LALT(S))   &kp LC(LALT(D))    &kp LC(LALT(F))   &kp LC(LALT(G))  &kp LC(LALT(H)) &kp LC(LALT(J)) &kp LC(LALT(K))   &kp LC(LALT(L))  &kp LC(LALT(SEMI))  &kp TILDE
+&trans     &kp LC(LA(A))    &kp LC(LA(S))   &kp LC(LA(D))    &kp LC(LA(F))   &kp LC(LA(G))  &kp LC(LA(H)) &kp LC(LA(J)) &kp LC(LA(K))   &kp LC(LA(L))  &kp LC(LA(SEMI))  &kp TILDE
 &trans     &trans    &kp LGUI &trans    &trans     &trans     &trans         &trans    &trans     &trans            &kp COMMA          &trans
                               &trans    &trans     &mo 3      &kp TAB        &trans    &trans
             >;
