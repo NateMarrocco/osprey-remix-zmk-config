@@ -66,9 +66,9 @@
             label = "Base";
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp E  &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P   &kp BACKSPACE
-&kp ESCAPE  &kp A  &kp S  &kp D  &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &kp GRAVE  &kp F20 // F20 Toggles window switching in komorai F23 toggles mouse
+&kp ESCAPE  &kp A  &kp S  &kp D  &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &kp GRAVE  &kp F23 // F23 Toggles window switching in komorai F23 toggles mouse
 &kp SEMI     &kp Z  &kp X  &kp C  &kp V   &kp B   &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH  &kp LALT
-                            &kp ENTER  &kp LCTRL &mo 2   &kp SPACE      &mo 3 &kp  LSHIFT
+                            &kp ENTER  &mo 1 &mo 2   &kp SPACE      &mo 3 &kp  LSHIFT
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
@@ -77,7 +77,7 @@
             label = "Lower";
             bindings = <
 &kp GRAVE  &kp LC(1)  &kp LC(2)   &kp LC(3)  &kp LC(4)   &kp PRCNT  &kp CARET      &kp AMPS  &kp ASTRK  &kp LPAR          &kp RPAR           &kp ESCAPE
-&trans     &kp LC(LA(A))    &kp LC(LA(S))   &kp LC(LA(D))    &kp LC(LA(F))   &kp F17  &kp F18 &kp F19 &kp F23   &kp F21  &kp F22  &kp TILDE
+&trans     &kp F13    &kp F14   &kp F15    &kp F16   &kp F17  &kp F18 &kp F19 &kp F20   &kp F21  &kp F22  &kp TILDE
 &trans     &trans    &kp LGUI &trans    &trans     &trans     &trans         &trans    &trans     &trans            &kp COMMA          &trans
                               &trans    &trans     &mo 3      &kp TAB        &trans    &trans
             >;
