@@ -68,7 +68,7 @@
 &kp TAB     &kp Q  &kp W  &kp E  &kp R   &kp T   &kp Y  &kp U  &kp I   &kp O   &kp P   &kp BACKSPACE
 &kp ESCAPE  &kp A  &kp S  &kp D  &kp F   &kp G   &kp H  &kp J  &kp K   &kp L   &kp GRAVE  &kp F20 // F20 Toggles window switching in komorai F23 toggles mouse
 &kp SEMI     &kp Z  &kp X  &kp C  &kp V   &kp B   &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH  &kp LALT
-                            &kp ENTER  &kp LC(LA()) &mo 2   &kp SPACE      &mo 3 &kp  LSHIFT
+                            &kp ENTER  &kp LC(LA) &mo 2   &kp SPACE      &mo 3 &kp  LSHIFT
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
