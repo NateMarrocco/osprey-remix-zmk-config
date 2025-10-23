@@ -68,7 +68,7 @@
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp N  &kp ESCAPE//  Toggles window switching 
-&kp F16    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp N  &kp M  &kp COMMA &kp DOT &kp F15  &kp LALT
+&kp END    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp N  &kp M  &kp COMMA &kp DOT &kp F15  &kp LALT
                             &kp LSHIFT  &mo 1 &mo 2   &mo 3      &kp SPACE &kp  ENTER
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
