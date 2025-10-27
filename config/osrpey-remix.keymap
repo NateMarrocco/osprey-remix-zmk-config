@@ -89,7 +89,7 @@
             bindings = <
 &kp ESCAPE  &kp EXCL &kp AT  &kp HASH       &kp DLLR    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR &kp GRAVE  &kp BACKSPACE
 &kp QMARK      &kp N0  &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp SEMI
-&trans      &trans  &trans  &kp UP_ARROW  &kp DOWN_ARROW  &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
+&trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &trans      &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
                             &trans        &trans          &kp UNDER   &mo 3   &kp ENTER  &trans
             >;
         };
@@ -98,7 +98,7 @@
             label = "Adjust";
             bindings = <
 &none   &none   &none   &none    &kp LC(R)  &none    &bt BT_SEL 0  &kp UP      &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
-&kp F1  &kp LC(A)  &kp F3  &kp LC(C)   &kp LC(F)       &kp F6   &kp LC(Z)      &kp LC(V)    &kp RIGHT     &none   &kp COLON   &none
+&kp PRCNT  &kp LC(A)  &kp PLUS  &kp LC(C)   &kp LC(F)       &kp MINUS  &kp LC(Z)      &kp LC(V)    &kp PRCNT     &kp EQUALS   &kp COLON   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
                         &trans   &trans       &trans   &trans        &trans      &trans
             >;
