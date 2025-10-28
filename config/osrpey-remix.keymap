@@ -97,8 +97,8 @@
         adjust_layer {
             label = "Adjust";
             bindings = <
-&none   &none   &none   &none    &kp LC(R)  &none    &bt BT_SEL 0  &kp UP      &bt BT_SEL 2  &trans  &trans  &bt BT_CLR
-&kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(F)   &kp   LC(C)     &kp  PLUS &kp  MINUS    &kp LC(V)    &kp PRCNT     &kp EQUAL   &kp COLON   &none
+&none   &none   &none   &kp C_VOL_UP    &kp LC(R)  &none    &bt BT_SEL 0  &kp UP      &kp C_VOL_DN   &kp C_MUTE  &trans  &bt BT_CLR
+&kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(F)   &kp   LC(C)     &kp  PLUS &kp  MINUS    &kp LC(V)    &kp UNDER     &kp EQUAL   &kp COLON   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
                         &trans   &trans       &trans   &trans        &trans      &trans
             >;
