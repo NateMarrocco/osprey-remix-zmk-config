@@ -77,8 +77,8 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp GRAVE  &kp LC(N1)  &kp LC(N2)   &kp LBRC  &kp RBRC   &kp PRCNT  &kp CARET       &kp LC(PG_UP)  &kp AMPS  &kp LC(TAB)      &kp F14            &kp LC(W)
-&trans     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5  &kp F6 &kp F7 &kp F11   &kp LPAR &kp RPAR  &kp F12
+&kp GRAVE  &kp LC(N1)  &kp LC(N2)   &kp LBRC  &kp RBRC   &kp PRCNT  &kp CARET       &kp LPAR    &kp RPAR   &kp AMPS     &kp F14            &kp LC(W)
+&trans     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5  &kp F6 &kp LA(TAB) &kp LA(LS(TAB))  &kp LC(PG_UP) &kp LC(TAB)&kp F12
 &kp QMARK     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp LS(F5)     &kp LS(F6)         &kp LS(F7)    &kp LS(F8)     &kp LS(F9)            &kp COMMA          &trans
                               &trans    &trans     &mo 3      &kp TAB        &trans    &kp LSHIFT
             >;
@@ -88,7 +88,7 @@
             label = "Raise";
             bindings = <
 &kp ESCAPE  &kp EXCL &kp AT  &kp LBRC       &kp RBRC    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR &kp GRAVE  &kp BACKSPACE
-&kp QMARK      &kp N0  &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp SEMI
+&kp QMARK        &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp SEMI
 &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DLLR      &kp HASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
                             &trans        &trans          &kp UNDER   &mo 3   &kp ENTER  &trans
             >;
