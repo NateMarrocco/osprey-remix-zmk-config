@@ -67,9 +67,9 @@
             label = "Base";
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
-&kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp N  &kp ESCAPE//  Toggles window switching 
-&kp LC(SEMI)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp N  &kp M  &kp COMMA &kp DOT &kp F15  &kp ENTER
-                            &kp LSHIFT  &mo 1 &mo 2   &mo 3      &kp SPACE &kp  LALT
+&kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp SPACE  &kp N
+&kp LC(SEMI)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp COMMA &kp M  &kp ESCAPE &kp DOT &kp F15  &kp ENTER
+                            &kp LSHIFT  &mo 1 &mo 2        &mo 3  &mo 4 &kp  LALT
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
@@ -108,7 +108,7 @@
             label = "Mouse";
             bindings = <
 &trans     &trans      &trans     &kp E        &trans     &trans     &trans     &trans     &kp I      &trans     &trans    &trans
-&trans     &kp F22     &kp F21    &trans       &trans     &trans     &trans     &kp J      &kp K      &kp L      &toggle_mouse_layer  &trans //F21 is going to be flow launcher hints
+&trans     &kp F22     &kp F21    &kp Z       &kp Z     &kp Z     &kp Z     &kp J      &kp K      &kp L      &kp Z  &trans 
 &trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
                                   &trans       &trans     &trans     &trans     &trans     &kp D
             >;
