@@ -78,7 +78,7 @@
             label = "Lower";
             bindings = <
 &kp GRAVE  &kp LC(N1)  &kp LC(N2)   &kp LBRC  &kp RBRC   &kp PRCNT  &kp CARET       &kp LPAR    &kp RPAR   &kp AMPS     &kp F14            &kp LC(W)
-&kp F13     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5  &kp LC(F6) &kp LC(F7) &kp LC(F8) &kp LC(F9) &kp LC(F11) &kp LC(F12)
+&kp F13     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)  &kp LA(N6)
 &kp QMARK     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp LS(F5)     &kp LS(F6)         &kp LS(F7)    &kp LS(F8)     &kp LS(F9)            &kp FSLH          &trans
                               &trans    &trans     &mo 3      &kp MINUS        &kp  LA(LS(TAB))    &kp LSHIFT
             >;
