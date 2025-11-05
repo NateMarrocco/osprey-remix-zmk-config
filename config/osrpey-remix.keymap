@@ -87,7 +87,7 @@
         raise_layer {
             label = "Raise";
             bindings = <
-&kp ESCAPE  &kp S &kp AT  &kp LBRC       &kp FSLASH    &kp EQUALS  &kp  CARET &kp ASTRK  &kp PLUS  &kp MINUS &kp GRAVE  &kp BACKSPACE
+&kp ESCAPE  &kp S &kp AT  &kp LBRC       &kp FSLASH    &kp EQUALS  &kp CARET &kp ASTRK  &kp PLUS  &kp MINUS &kp GRAVE  &kp BACKSPACE
 &kp Q        &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp SEMI
 &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DLLR      &kp HASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
                             &trans        &trans          &kp UNDER   &kp EXCL   &kp QMARK  &trans
