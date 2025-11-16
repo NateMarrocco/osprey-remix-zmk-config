@@ -69,7 +69,7 @@
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp N  &kp ESCAPE
 &kp LA(TILDE)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp COMMA &kp M  &kp COMMA &kp DOT &kp F15  &kp ENTER
-                            &kp LSHIFT  &mo 3 &mo 1        &mo 2  &kp SPACE &kp LALT
+                            &kp LSHIFT  &mo 3 &mo 1        &mo 2  &kp SPACE &mo 4
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
@@ -77,7 +77,7 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp RBRC   &kp PRCNT  &kp CARET       &kp LPAR    &kp RPAR   &kp EXCLAMATION      &kp AT           &kp LC(W)
+&kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp RBRC   &kp PRCNT  &kp CARET       &kp LC(C)    &kp LC(V)   &kp LC(Z)      &kp AT           &kp LC(W)
 &kp SEMI     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp F6  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)
 &kp AMPS     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp LS(F5)     &kp LS(F6)         &kp LS(F7)    &kp LS(F8)     &kp LS(F9)            &kp FSLH          &kp COLON
                               &trans    &trans     &mo 3      &kp UNDER        &kp  LA(LS(TAB))    &kp LSHIFT
@@ -88,7 +88,7 @@
             label = "Raise";
             bindings = <
 &kp ESCAPE &kp S &kp AT &kp LBRC &kp FSLH &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp GRAVE &kp BACKSPACE
-&kp Q        &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp SEMI
+&kp LESS_THAN       &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp GREATER_THAN
 &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DOLLAR      &kp HASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
                             &trans        &trans          &kp UNDER   &kp EXCL   &kp QMARK  &trans
             >;
@@ -98,7 +98,7 @@
             label = "Adjust";
             bindings = <
 &none   &none   &none   &kp C_VOL_UP     &kp C_MUTE  &kp LC(R)  &kp X  &kp C_VOL_UP      &kp C_VOL_DN   &kp UP  &kp UP  &bt BT_CLR
-&kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(F)   &kp   LC(C)     &kp  PLUS &kp  MINUS    &kp LC(V)    &kp LEFT     &kp DOWN   &kp RIGHT   &none
+&kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(F)   &kp   LC(C)     &kp  PLUS &kp  MINUS    &kp LC(V)   &kp LEFT    &kp DOWN   &kp RIGHT   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
                         &trans   &trans       &trans   &trans        &trans      &trans
             >;
@@ -107,8 +107,8 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans     &trans      &trans     &kp E        &trans     &trans     &trans     &trans     &kp I      &trans     &trans    &trans
-&trans     &kp F22     &kp F21    &kp Z       &kp Z     &kp Z     &kp Z     &kp J      &kp K      &kp L      &kp Z  &trans 
+&trans     &trans      &trans     &kp MINUS        &trans     &trans     &trans     &trans     &kp LALT     &kp AT     &trans    &trans
+&trans     &kp F22     &kp F21        &kp LPAR     &kp RPAR &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp Z 
 &trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
                                   &trans       &trans     &trans     &trans     &trans     &kp D
             >;
