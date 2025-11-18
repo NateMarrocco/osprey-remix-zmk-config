@@ -68,7 +68,7 @@
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp N  &kp ESCAPE
-&kp LA(TILDE)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp COMMA &kp M  &kp COMMA &kp DOT &kp F15  &kp ENTER
+&kp LA(TILDE)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp COLON &kp M  &kp COMMA &kp DOT &kp F15  &kp ENTER
                             &mo 2  &kp LSHIFT &mo 1        &mo 3 &kp SPACE &mo 4
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
@@ -108,9 +108,9 @@
             label = "Mouse";
             bindings = <
 &trans     &trans      &trans     &kp MINUS        &kp LC(Z)        &trans     &trans     &trans     &kp LALT     &kp AT     &trans    &trans
-&kp LC(A)       &kp LPAR     &kp RPAR &kp SEMI    &kp COLON      &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp Z 
+&kp LC(A)       &kp LPAR     &kp RPAR &kp DOUBLE_QUOTES    &kp SEMI      &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp Z 
 &trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
-                                  &trans       &trans     &trans     &trans     &trans     &kp D
+                                  &kp LWIN       &kp HASH     &trans     &trans     &trans     &kp D
             >;
         };
     };
