@@ -89,7 +89,7 @@
             bindings = <
 &kp ESCAPE &kp S &kp AT &kp LBRC &kp FSLH &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp GRAVE &kp BACKSPACE
 &kp LESS_THAN       &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp GREATER_THAN
-&trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DOLLAR      &kp HASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp COMMA &kp FSLH  &trans
+&trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DOLLAR      &kp HASH  &kp QMARK  &kp EXCLAMATION &kp COMMA &kp FSLH  &trans
                             &trans        &trans          &kp UNDER   &kp EXCL   &kp QMARK  &trans
             >;
         };
@@ -100,7 +100,7 @@
 &none   &none   &none   &kp C_VOL_UP     &kp C_MUTE  &kp LC(R)  &kp X  &kp C_VOL_UP      &kp C_VOL_DN   &kp UP  &kp UP  &kp DOLLAR
 &kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(C)  &kp   LC(V)    &kp  LWIN &kp  MINUS    &kp LC(V)   &kp LEFT    &kp DOWN   &kp RIGHT   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
-                        &trans   &trans       &trans   &trans        &trans      &trans
+                        &trans   &trans       &trans   &trans        &trans      &trans   
             >;
         };
         
@@ -108,8 +108,8 @@
             label = "Mouse";
             bindings = <
 &trans     &trans      &kp BACKSLASH     &kp MINUS        &kp LC(Z)        &kp DOUBLE_QUOTES     &trans     &trans     &kp LALT     &kp AT     &trans    &trans
-&kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
-&trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
+&kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp HASH     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
+&trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans     &trans     &trans     &trans     &trans    &trans
                                   &kp LWIN       &kp HASH     &trans     &trans     &trans     &kp D
             >;
         };
