@@ -69,7 +69,7 @@
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O   &kp N  &kp ESCAPE
 &kp LA(TILDE)    &kp Z  &kp X  &kp C  &kp V   &kp B   &kp COMMA &kp M  &kp COMMA &kp DOT &kp F15  &kp ENTER
-                            &kp LSHIFT  &mo 3 &mo 1        &mo 2  &kp SPACE &mo 4
+                            &mo 2  &mo 3 &kp LSHIFT        &mo 1  &kp SPACE &mo 4
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
@@ -97,7 +97,7 @@
         adjust_layer {
             label = "Adjust";
             bindings = <
-&none   &none   &none   &kp C_VOL_UP     &kp C_MUTE  &kp LC(R)  &kp X  &kp C_VOL_UP      &kp C_VOL_DN   &kp UP  &kp UP  &bt BT_CLR
+&none   &none   &none   &kp C_VOL_UP     &kp C_MUTE  &kp LC(R)  &kp X  &kp C_VOL_UP      &kp C_VOL_DN   &kp UP  &kp UP  &kp DOLLAR
 &kp PRCNT  &kp LC(A)  &kp   LC(Z) &kp LC(F)   &kp   LC(C)     &kp  PLUS &kp  MINUS    &kp LC(V)   &kp LEFT    &kp DOWN   &kp RIGHT   &none
 &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none         &sys_reset  &none         &none   &none   &none
                         &trans   &trans       &trans   &trans        &trans      &trans
@@ -107,8 +107,8 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans     &trans      &trans     &kp MINUS        &trans     &trans     &trans     &trans     &kp LALT     &kp AT     &trans    &trans
-&trans     &kp F22     &kp F21        &kp LPAR     &kp RPAR &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp Z 
+&trans     &trans      &trans     &kp MINUS        &kp LC(ZR        &trans     &trans     &trans     &kp LALT     &kp AT     &trans    &trans
+&kp LC(A)       &kp LPAR     &kp RPAR &kp LC(C)    &kp LC(V)      &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp Z 
 &trans     &trans      &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans
                                   &trans       &trans     &trans     &trans     &trans     &kp D
             >;
