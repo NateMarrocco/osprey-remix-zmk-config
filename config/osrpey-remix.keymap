@@ -108,7 +108,7 @@
             label = "Mouse";
             bindings = <
 &trans     &trans      &kp BACKSLASH     &kp MINUS        &kp LC(Z)        &kp DOUBLE_QUOTES     &trans     &kp LC(V)     &kp LALT     &kp AT     &trans    &trans
-&kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp HASH     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
+&kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
 &trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans     &trans     &trans     &trans     &trans    &trans
                                   &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &kp D
             >;
