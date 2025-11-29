@@ -67,8 +67,8 @@
             label = "Base";
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
-&kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp F15 &kp ESCAPE
- &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp M &kp ENTER &kp COLON &kp DOT  &kp N     &kp LC(V)
+&kp GRAVE  &kp A  &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp N &kp ESCAPE
+ &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
                             &mo 2  &kp LSHIFT &mo 1        &mo 3 &kp SPACE  &mo 4
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
@@ -79,8 +79,8 @@
             bindings = <
 &kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp AT  &kp PRCNT  &kp DOUBLE_QUOTES    &kp LA(TILDE)      &kp COMMA    &kp LC(Z)       &kp EXCLAMATION       &kp LC(W)
 &kp SEMI     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp F6  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)
-&kp AMPS     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S       &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
-                              &trans    &trans     &mo 3      &kp UNDER        &kp  LA(LS(TAB))    &kp QMARK
+&kp AMPS     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S   &kp  F15   &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
+                              &trans    &trans     &mo 3      &kp UNDER        &kp      &kp QMARK
             >;
         };
         
