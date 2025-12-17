@@ -1,12 +1,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-
 &mt {
     flavor = "balanced";
     tapping-term-ms = <250>;
 };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -24,15 +22,6 @@
         minus2 {
             bindings = <&kp MINUS>;
             key-positions = <17 16>;
-        };
-    };
-    
-    // Add conditional layer configuration
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        ctrl_layer {
-            if-layers = <2 4>;  // When both layer 2 AND layer 4 are active
-            then-layer = <5>;    // Activate layer 5
         };
     };
     
@@ -69,16 +58,17 @@
     
     keymap {
         compatible = "zmk,keymap";
-        
+        // TODO add tab key so that u can tab throuh dialhuge
         default_layer {
             label = "Base";
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A   &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp N &kp ESCAPE
-&kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
+ &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
                             &mo 2  &kp LSHIFT &mo 1       &kp F15 &kp SPACE  &mo 4
             >;
-        };
+        };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
+// catch the ctrl-alt-other keys and map them to what we want
         
         lower_layer {
             label = "Lower";
@@ -117,17 +107,6 @@
 &kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
 &trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans     &trans     &trans     &trans     &trans    &trans
                                   &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &kp D
-            >;
-        };
-        
-        // New layer 5 - activated when both mo 2 and mo 4 are held
-        ctrl_layer {
-            label = "Ctrl";
-            bindings = <
-&kp LCTRL     &kp LC(Q)  &kp LC(W)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp LC(Y)  &kp LC(J)  &kp LC(K)  &kp LC(L)  &kp LC(P)  &kp LCTRL
-&kp LCTRL     &kp LC(A)  &kp LC(S)  &kp LC(E)  &kp LC(R)  &kp LC(T)  &kp LC(H)  &kp LC(U)  &kp LC(I)  &kp LC(O)  &kp LC(N)  &kp LCTRL
-&kp LCTRL     &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &kp LCTRL  &kp LC(M)  &kp LCTRL  &kp LCTRL  &kp LCTRL  &kp LCTRL
-                                    &trans     &trans     &trans     &trans     &trans     &trans
             >;
         };
     };
