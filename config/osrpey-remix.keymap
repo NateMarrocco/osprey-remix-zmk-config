@@ -80,7 +80,7 @@
             bindings = <
 &kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp AT  &kp PRCNT  &kp DOUBLE_QUOTES    &kp LWIN      &kp COMMA    &kp LC(Z)       &kp EXCLAMATION       &kp LC(W)
 &kp SEMI     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp F6  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)
-&kp AMPS     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S     &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
+&trans     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S     &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
                               &trans    &trans     &kp F1      &kp UNDER        &kp   LA(TAB)   &kp QMARK
             >;
         };
@@ -91,7 +91,7 @@
 &kp ESCAPE &kp S &kp AT &kp LBRC &kp FSLH &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp GRAVE &kp BACKSPACE
 &kp LESS_THAN       &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp GREATER_THAN
 &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DOLLAR      &kp HASH  &kp QMARK  &kp EXCLAMATION &kp COMMA &kp FSLH  &trans
-                            &trans        &trans          &kp UNDER   &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &trans
+                            &trans        &trans          &kp UNDER   &trans   &trans  &trans
             >;
         };
         
@@ -108,7 +108,7 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans     &kp BACKSLASH      &kp C_MUTE     &kp C_VOL_UP     &kp C_VOL_DN     &kp DOUBLE_QUOTES     &trans     &kp LC(V)     &kp LALT     &kp AT     &trans    &trans
+&trans     &kp BACKSLASH      &kp C_MUTE     &kp C_VOL_UP     &kp C_VOL_DN     &kp DOUBLE_QUOTES     &trans     &trans &kp AMPS &kp AT     &trans    &trans
 &kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
 &trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans    &out OUT_BLE     &out OUT_TOG    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1
                                   &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &kp D
