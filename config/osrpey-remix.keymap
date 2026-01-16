@@ -109,7 +109,7 @@
             bindings = <
 &trans     &kp BACKSLASH      &kp C_MUTE     &kp C_VOL_UP     &kp C_VOL_DN     &kp DOUBLE_QUOTES     &trans     &kp LC(V)     &kp LALT     &kp AT     &trans    &trans
 &kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
-&trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans     &trans     &trans     &trans     &trans    &trans
+&trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans     &trans     &trans     &trans    &bt BT_SEL 0    &bt BT_SEL 1
                                   &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &kp D
             >;
         };
