@@ -59,44 +59,50 @@
             bindings = <&kp F11>, <&tog 4>;
         };
         
-        mo1_shift_f1: mo1_shift_f1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO1_SHIFT_F1";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <1>;
-            bindings = <&mo>, <&kp>;
+        mo1_sf1: mo1_sf1 {
+            compatible = "zmk,behavior-macro";
+            label = "MO1_SF1";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT &kp F1>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHIFT &kp F1>
+                ;
         };
         
-        mo2_shift_f2: mo2_shift_f2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO2_SHIFT_F2";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <1>;
-            bindings = <&mo>, <&kp>;
+        mo2_sf2: mo2_sf2 {
+            compatible = "zmk,behavior-macro";
+            label = "MO2_SF2";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT &kp F2>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHIFT &kp F2>
+                ;
         };
         
-        mo4_shift_f3: mo4_shift_f3 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO4_SHIFT_F3";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <1>;
-            bindings = <&mo>, <&kp>;
+        mo4_sf3: mo4_sf3 {
+            compatible = "zmk,behavior-macro";
+            label = "MO4_SF3";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHIFT &kp F3>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHIFT &kp F3>
+                ;
         };
     };
     
     keymap {
         compatible = "zmk,keymap";
-        // TODO add tab key so that u can tab throuh dialhuge
+        
         default_layer {
             label = "Base";
             bindings = 
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A   &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp N &kp ESCAPE
  &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
-                            &mo2_shift_f2 2 LS(F2)  &kp LSHIFT &mo1_shift_f1 1 LS(F1)       &kp F15 &kp SPACE  &mo4_shift_f3 4 LS(F3)
+                            &mo2_sf2  &kp LSHIFT &mo1_sf1       &kp F15 &kp SPACE  &mo4_sf3
             >;
         };
         
@@ -106,7 +112,7 @@
 &kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp AT  &kp PRCNT  &kp DOUBLE_QUOTES    &kp LWIN      &kp COMMA    &kp LC(Z)       &kp EXCLAMATION       &kp LC(W)
 &kp SEMI     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp F6  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)
 &trans     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S     &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
-                              &trans    &trans     &kp F1      &kp UNDER        &kp   LA(TAB)   &kp QMARK
+                              &trans    &trans     &mo 1      &kp UNDER        &kp   LA(TAB)   &kp QMARK
             >;
         };
         
@@ -116,7 +122,7 @@
 &kp ESCAPE &kp S &kp AT &kp LBRC &kp FSLH &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp GRAVE &kp BACKSPACE
 &kp LESS_THAN       &kp N1  &kp N2        &kp N3          &kp N4      &kp N5  &kp N6  &kp N7  &kp N8  &kp N9 &kp N0 &kp GREATER_THAN
 &trans      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp DOLLAR      &kp HASH  &kp QMARK  &kp EXCLAMATION &kp COMMA &kp FSLH  &trans
-                            &trans        &trans          &kp UNDER   &trans   &trans  &trans
+                            &mo 2        &trans          &kp UNDER   &trans   &trans  &trans
             >;
         };
         
@@ -136,7 +142,7 @@
 &trans     &kp BACKSLASH      &kp C_MUTE     &kp C_VOL_UP     &kp C_VOL_DN     &kp DOUBLE_QUOTES     &kp MINUS     &trans &kp AMPS &kp AT     &trans    &trans
 &kp LC(A)         &kp SEMI   &kp PERCENT &kp LPAR     &kp RPAR     &kp LEFT_BRACKET     &kp RIGHT_BRACKET     &kp LBRC     &kp RBRC     &kp EXCLAMATION      &kp QMARK      &kp HASH
 &trans     &trans      &trans     &kp SINGLE_QUOTE       &kp LEFT_BRACKET     &kp RIGHT_BRACKET   &trans    &out OUT_BLE     &out OUT_TOG    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 1
-                                  &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &kp D
+                                  &kp LC(V)   &kp LWIN         &kp LC(C)     &trans     &trans     &mo 4
             >;
         };
     };
