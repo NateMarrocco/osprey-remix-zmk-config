@@ -98,8 +98,7 @@
  &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
                             &mo2_shift_f2 2 LS(F2)  &kp LSHIFT &mo1_shift_f1 1 LS(F1)       &kp F15 &kp SPACE  &mo4_shift_f3 4 LS(F3)
             >;
-        };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
-// catch the ctrl-alt-other keys and map them to what we want
+        };
         
         lower_layer {
             label = "Lower";
