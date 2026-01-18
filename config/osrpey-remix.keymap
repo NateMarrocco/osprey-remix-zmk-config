@@ -7,11 +7,11 @@
  * LAYER TAP CONFIG
  * HOLD = layer
  * TAP = key
- * PRACTICALLY ZERO DELAY
+ * VERY FAST BUT USABLE
  * ================================ */
 &lt {
     flavor = "hold-preferred";
-    tapping-term-ms = <1>;
+    tapping-term-ms = <180>;
 };
 
 &mt {
@@ -124,3 +124,4 @@
         };
     };
 };
+
