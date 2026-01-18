@@ -3,6 +3,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/* ================================
+ * LAYER TAP CONFIG
+ * HOLD = layer
+ * TAP = key
+ * PRACTICALLY ZERO DELAY
+ * ================================ */
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <1>;
+};
+
 &mt {
     flavor = "balanced";
     tapping-term-ms = <250>;
@@ -11,23 +22,23 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
+
         print_screen {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <25 26 27>;
         };
-        
+
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <18 19>;
         };
-        
+
         minus2 {
             bindings = <&kp MINUS>;
             key-positions = <17 16>;
         };
     };
-    
+
     behaviors {
         control_alt_macro: control_alt_macro {
             compatible = "zmk,behavior-macro";
@@ -42,7 +53,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(TAB)>;
         };
-        
+
         shift_space_to_enter: shift_space_to_enter {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_SPACE_TO_ENTER";
@@ -57,43 +68,8 @@
             #binding-cells = <0>;
             bindings = <&kp F11>, <&tog 4>;
         };
-
-        /* ================================
-         * INSTANT LAYER + SHIFT Fx MACROS
-         * NO TAP-HOLD, NO DELAY
-         * ================================ */
-
-        mo2_shift_f1: mo2_shift_f1 {
-            compatible = "zmk,behavior-macro";
-            label = "MO2_SHIFT_F1";
-            #binding-cells = <0>;
-
-            bindings-press = <
-                &layer_on 2
-                &kp LS(F1)
-            >;
-
-            bindings-release = <
-                &layer_off 2
-            >;
-        };
-
-        mo1_shift_f2: mo1_shift_f2 {
-            compatible = "zmk,behavior-macro";
-            label = "MO1_SHIFT_F2";
-            #binding-cells = <0>;
-
-            bindings-press = <
-                &layer_on 1
-                &kp LS(F2)
-            >;
-
-            bindings-release = <
-                &layer_off 1
-            >;
-        };
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -101,22 +77,22 @@
             label = "Base";
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
-&kp GRAVE  &kp A   &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp N &kp ESCAPE
-&kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
-                    &mo2_shift_f1  &kp LSHIFT  &mo1_shift_f2     &kp F15 &kp SPACE  &mo 4
+&kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
+&kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
+                &lt 2 LS(F1)   &kp LSHIFT   &lt 1 LS(F2)   &kp F15   &kp SPACE   &mo 4
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&kp GRAVE  &kp LC(N1)  &kp QMARK   &kp LBRC  &kp AT  &kp PRCNT  &kp DOUBLE_QUOTES    &kp LWIN      &kp COMMA    &kp LC(Z)       &kp EXCLAMATION       &kp LC(W)
-&kp SEMI     &kp F1    &kp F2   &kp F3    &kp F4   &kp F5     &kp F6  &kp LC(N1)  &kp LC(N2)  &kp LC(N3)  &kp LC(N4)  &kp LC(N5)
-&trans     &kp LS(F1)    &kp LS(F2) &kp LS(F3)    &kp LS(F4)     &kp S     &kp S     &kp EXCLAMATION    &kp DOLLAR   &kp AT         &kp FSLH          &kp SINGLE_QUOTE
-                              &trans    &trans     &kp F1      &kp UNDER        &kp LA(TAB)   &kp QMARK
+&kp GRAVE &kp LC(N1) &kp QMARK &kp LBRC &kp AT &kp PRCNT &kp DOUBLE_QUOTES &kp LWIN &kp COMMA &kp LC(Z) &kp EXCLAMATION &kp LC(W)
+&kp SEMI  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)
+&trans &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp S &kp EXCLAMATION &kp DOLLAR &kp AT &kp FSLH &kp SINGLE_QUOTE
+                    &trans &trans &kp F1 &kp UNDER &kp LA(TAB) &kp QMARK
             >;
         };
-        
+
         raise_layer {
             label = "Raise";
             bindings = <
@@ -126,7 +102,7 @@
                     &trans &trans &kp UNDER &trans &trans &trans
             >;
         };
-        
+
         adjust_layer {
             label = "Adjust";
             bindings = <
@@ -136,7 +112,7 @@
                     &trans &trans &trans &trans &trans &trans
             >;
         };
-        
+
         mouse_layer {
             label = "Mouse";
             bindings = <
