@@ -79,7 +79,7 @@
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
 &kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
-                &lt 2 LS(F1)   &kp LSHIFT   &lt 1 LS(F2)   &kp F15   &kp SPACE   &mo 4
+                &lt 2 F8   &kp LSHIFT   &lt 1 F7   &kp F15   &kp SPACE   &mo 4
             >;
         };
 
