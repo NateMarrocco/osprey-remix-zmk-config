@@ -59,37 +59,31 @@
             bindings = <&kp F11>, <&tog 4>;
         };
         
-        mo_with_shift_f1: mo_with_shift_f1 {
-            compatible = "zmk,behavior-macro";
-            label = "MO_WITH_SHIFT_F1";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &mo 1 &kp LSHIFT &kp F1>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo 1 &kp LSHIFT &kp F1>
-                ;
+        mo1_shift_f1: mo1_shift_f1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO1_SHIFT_F1";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <1>;
+            bindings = <&mo>, <&kp>;
         };
         
-        mo_with_shift_f2: mo_with_shift_f2 {
-            compatible = "zmk,behavior-macro";
-            label = "MO_WITH_SHIFT_F2";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &mo 2 &kp LSHIFT &kp F2>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo 2 &kp LSHIFT &kp F2>
-                ;
+        mo2_shift_f2: mo2_shift_f2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO2_SHIFT_F2";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <1>;
+            bindings = <&mo>, <&kp>;
         };
         
-        mo_with_shift_f3: mo_with_shift_f3 {
-            compatible = "zmk,behavior-macro";
-            label = "MO_WITH_SHIFT_F3";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &mo 4 &kp LSHIFT &kp F3>
-                , <&macro_pause_for_release>
-                , <&macro_release &mo 4 &kp LSHIFT &kp F3>
-                ;
+        mo4_shift_f3: mo4_shift_f3 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO4_SHIFT_F3";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <1>;
+            bindings = <&mo>, <&kp>;
         };
     };
     
@@ -102,7 +96,7 @@
 &kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A   &kp S  &kp E &kp R  &kp T   &kp H  &kp U  &kp I   &kp O  &kp N &kp ESCAPE
  &kp LC(C)   &kp Z  &kp X  &kp C  &kp V   &kp B       &kp COLON &kp M &kp COMMA &kp DOT  &kp ENTER     &kp LC(V)
-                            &mo_with_shift_f2  &kp LSHIFT &mo_with_shift_f1       &kp F15 &kp SPACE  &mo_with_shift_f3
+                            &mo2_shift_f2 2 LS(F2)  &kp LSHIFT &mo1_shift_f1 1 LS(F1)       &kp F15 &kp SPACE  &mo4_shift_f3 4 LS(F3)
             >;
         };// TODO switching wont work from layres, we need to replace mo 1 with ctrl-alt, then we need to use the komorebi ahk script to 
 // catch the ctrl-alt-other keys and map them to what we want
