@@ -98,8 +98,8 @@
             bindings = <
 &kp ESCAPE &kp S &kp AT &kp LBRC &kp LC(Z) &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp GRAVE &kp BACKSPACE
 &kp LESS_THAN &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GREATER_THAN
-&trans &kp LEFT_ARROW &kp RIGHT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp DOLLAR &kp HASH &kp QMARK &kp EXCLAMATION &kp COMMA &kp FSLH &trans
-                    &tog 3 &trans &kp UNDER &trans &trans &trans
+ &tog 3 &kp LEFT_ARROW &kp RIGHT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp DOLLAR &kp HASH &kp QMARK &kp EXCLAMATION &kp COMMA &kp FSLH &trans
+                  &trans   &trans &kp UNDER &trans &trans &trans
             >;
         };
 
@@ -107,9 +107,9 @@
             label = "Adjust";
             bindings = <
 &none &none &none &kp C_VOL_UP &kp C_MUTE &kp LC(R) &kp X &kp C_VOL_UP &kp C_VOL_DN &kp UP &kp UP &kp DOLLAR
-&kp PRCNT &kp LC(A) &kp LC(Z) &kp LC(C) &kp LC(V) &kp LWIN &kp MINUS &kp LC(V) &kp LEFT &kp DOWN &kp RIGHT &none
-&kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &bt BT_SEL 0 &bt BT_SEL 1 &none &none &none
-                    &tog 3 &trans &trans &trans &trans &trans
+&kp A &kp E &kp S &kp E &kp R &kp LWIN &kp MINUS &kp LC(V) &kp LEFT &kp DOWN &kp RIGHT &none
+&tog 3 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &none &bt BT_SEL 0 &bt BT_SEL 1 &none &none &none
+                   &kp F7   &kp I &kp N &kp M &kp H &trans
             >;
         };
 
