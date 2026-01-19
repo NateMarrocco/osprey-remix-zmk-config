@@ -109,7 +109,7 @@
 &kp ESCAPE   &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp ENTER  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
 &tog 3 &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
-                 &kp O  &kp N &kp N &kp M &kp H &trans
+                 &kp O  &kp I &kp N &kp M &kp H &trans
             >;
         };
 
