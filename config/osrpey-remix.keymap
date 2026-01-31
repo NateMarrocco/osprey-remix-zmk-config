@@ -76,7 +76,7 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
+&kp F8     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
 &kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
                 &lt 2 F8   &kp LSHIFT   &lt 1 F7   &kp F15   &kp SPACE   &mo 4
@@ -86,7 +86,7 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp F8 &kp UNDER &kp BACKSLASH
+&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp UNDER &kp BACKSLASH
 &kp SEMI  &kp F1 &kp F2 &kp F3 &kp F4 &kp LC(N6) &kp LC(N7) &kp  LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)
 &kp BACKSPACE &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW  &kp FSLH &kp SINGLE_QUOTE
                     &trans &trans &kp F1 &kp HASH &kp LA(TAB) &kp LC(A)
