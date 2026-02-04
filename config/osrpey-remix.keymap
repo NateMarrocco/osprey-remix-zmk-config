@@ -79,7 +79,7 @@
 &kp F8     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
 &kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
-                &lt 2 F8   &kp LSHIFT   &lt 1 F7   &kp F15   &kp SPACE   &mo 4
+                &lt 2 F8   &kp LSHIFT   &lt 1 F7   &kp LALT   &kp SPACE   &mo 4
             >;
         };
 
@@ -98,7 +98,7 @@
             bindings = <
 &trans &trans &trans &trans &trans &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp TILDE &kp BACKSLASH
 &kp LESS_THAN &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GREATER_THAN
- &trans &trans &trans &trans &trans &kp DOLLAR &kp HASH &trans &trans &trans &trans &trans
+ &tog 4 &trans &trans &trans &trans &kp DOLLAR &kp HASH &trans &trans &trans &trans &trans
                   &trans   &trans &trans &trans &kp DOLLAR &trans
             >;
         };
