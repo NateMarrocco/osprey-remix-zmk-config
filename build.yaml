@@ -2,3 +2,4 @@ include:
   - board: nice_nano
     shield: osrpey-remix
     artifact-name: osprey-remix-zmk
+    shield: settings_reset
