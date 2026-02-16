@@ -78,8 +78,8 @@
             bindings = <
 &kp F8     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
-&kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
-                &lt 2    &kp LSHIFT   &lt 1   &kp LALT   &kp SPACE   &mo 4
+&kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &trans &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
+                &mo 2    &kp LSHIFT   &mo 1   &kp LALT   &kp SPACE   &mo 4
             >;
         };
 
@@ -118,8 +118,8 @@
             bindings = <
  &kp ESCAPE &kp BACKSLASH &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &kp MINUS &trans &trans &trans &trans &trans
 &kp DOLLAR &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
-&trans &trans &kp LEFT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans &out OUT_BLE &out OUT_TOG &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1
-                    &kp LC(V) &kp LWIN &kp LC(C) &trans &trans &kp D
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                    &kp LC(V) &kp PIPE &kp COLON &trans &trans &kp D
             >;
         };
     };
