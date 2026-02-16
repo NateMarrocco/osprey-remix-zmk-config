@@ -118,7 +118,7 @@
             bindings = <
  &kp ESCAPE &kp BACKSLASH &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &kp MINUS &trans &trans &trans &trans &trans
 &kp DOLLAR &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
-&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &out OUT_TOG &trans &trans
                     &kp LC(V) &kp PIPE &kp COLON &trans &trans &kp D
             >;
         };
