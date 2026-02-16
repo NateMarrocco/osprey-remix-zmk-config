@@ -78,17 +78,17 @@
             bindings = <
 &kp F8     &kp Q  &kp W  &kp D  &kp F   &kp G   &kp Y  &kp J  &kp K   &kp L  &kp P   &kp BACKSPACE
 &kp GRAVE  &kp A  &kp S  &kp E  &kp R   &kp T   &kp H  &kp U  &kp I   &kp O  &kp N   &kp ESCAPE
-&kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &trans &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
-                &mo 2    &kp LSHIFT   &mo 1   &kp LALT   &kp SPACE   &mo 4
+&kp LC(C)  &kp Z  &kp X  &kp C  &kp V   &kp B        &kp COLON &kp M &kp COMMA &kp DOT &kp ENTER &kp LC(V)
+                &lt 2 F8   &kp LSHIFT   &lt 1 F7   &kp LALT   &kp SPACE   &mo 4
             >;
         };
 
         lower_layer {
             label = "Lower";
             bindings = <
-&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp UNDER &kp AMPS
+&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp UNDER &kp LA(F4)
 &kp SEMI  &kp F1 &kp F2 &kp F3 &kp F4 &kp LC(N6) &kp LC(N7) &kp  LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)
-&kp BACKSPACE &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW  &kp FSLH &kp SINGLE_QUOTE
+&kp BACKSPACE &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp MINUS  &kp FSLH &kp SINGLE_QUOTE
                     &trans &trans &kp F1 &kp HASH &kp LALT &kp LC(A)
             >;
         };
@@ -119,7 +119,7 @@
  &kp ESCAPE &kp BACKSLASH &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &kp MINUS &trans &trans &trans &trans &trans
 &kp DOLLAR &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
 &trans &trans &kp LEFT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans &out OUT_BLE &out OUT_TOG &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1
-                    &kp LC(V) &kp PIPE &kp COLON &trans &trans &kp D
+                    &kp LC(V) &kp LWIN &kp LC(C) &trans &trans &kp D
             >;
         };
     };
