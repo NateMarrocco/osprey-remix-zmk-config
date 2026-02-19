@@ -86,7 +86,7 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp F10 &kp ESCAPE
+&kp LA(PRINTSCREEN) &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp F10 &kp ESCAPE
 &trans  &kp F1 &kp F2 &kp F3 &kp F4 &kp LC(N6) &kp LC(N7) &kp  LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)
 &kp BACKSPACE &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW  &kp FSLH &kp SINGLE_QUOTE
                     &trans &trans &kp F1 &kp HASH &kp SEMI &kp LC(A)
