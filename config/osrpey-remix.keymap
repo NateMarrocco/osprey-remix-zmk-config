@@ -86,7 +86,7 @@
         lower_layer {
             label = "Lower";
             bindings = <
-&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp UNDER &kp AMPS
+&kp PRINTSCREEN &kp BACKSPACE &kp ENTER  &kp PRCNT &kp LC(Z) &kp AT &kp DOUBLE_QUOTES &kp LWIN &kp LC(W)  &kp TAB &kp F10 &kp AMPS
 &kp SEMI  &kp F1 &kp F2 &kp F3 &kp F4 &kp LC(N6) &kp LC(N7) &kp  LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &kp LC(N5)
 &kp BACKSPACE &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &kp S &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW  &kp FSLH &kp SINGLE_QUOTE
                     &trans &trans &kp F1 &kp HASH &kp LALT &kp LC(A)
@@ -99,7 +99,7 @@
 &trans &trans &trans &trans &trans &kp EQUAL &kp CARET &kp ASTRK &kp PLUS &kp MINUS &kp TILDE &kp BACKSLASH
 &kp LESS_THAN &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GREATER_THAN
  &tog 3 &trans &trans &trans &trans &kp DOLLAR &kp HASH &trans &trans &trans &trans &trans
-                  &trans   &trans &trans &trans &kp DOLLAR &trans
+                  &trans   &trans &trans &trans &kp COLON &trans
             >;
         };
 
@@ -117,9 +117,9 @@
             label = "Mouse";
             bindings = <
  &kp ESCAPE &kp BACKSLASH &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &trans &kp MINUS &trans &trans &trans &trans &trans
-&kp DOLLAR &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
+&kp PIPE &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
 &trans &trans &kp LEFT_ARROW &kp UP_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans &out OUT_BLE &out OUT_TOG &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1
-                    &kp LC(V) &kp PIPE &kp COLON &trans &trans &kp D
+                    &kp LC(V) &kp PIPE &kp DOLLAR &trans &trans &kp D
             >;
         };
     };
