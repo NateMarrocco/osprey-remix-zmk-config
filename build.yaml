@@ -1,5 +1,5 @@
 include:
-  - board: nice_nano
+  - board: nice_nano/nice_nano/zmk  
     shield: osrpey-remix
     artifact-name: osprey-remix-zmk
   - board: nice_nano
