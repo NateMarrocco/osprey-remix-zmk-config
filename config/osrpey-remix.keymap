@@ -118,7 +118,7 @@
             bindings = <
  &kp ESCAPE &kp BACKSLASH &kp TILDE &kp C_VOL_DN &kp C_VOL_UP &trans &kp MINUS &trans &trans &trans &trans &trans
 &kp LC(L) &kp SEMI &kp AMPS &kp LPAR &kp RPAR &kp HASH &kp DOLLAR &kp LBRC &kp RBRC &kp EXCLAMATION &kp QMARK &kp HASH
-&trans &trans &kp LEFT_ARROW &kp UP_ARROW &kp F8 &kp GRAVE &trans &out OUT_BLE &out OUT_TOG &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1
+&kp CARET &trans &kp LEFT_ARROW &kp UP_ARROW &kp F8 &kp GRAVE &trans &out OUT_BLE &out OUT_TOG &bt BT_CLR &bt BT_SEL 0 &kp TILDE
                     &kp F12 &kp PIPE &kp DOLLAR &trans &trans &kp D
             >;
         };
