@@ -2,7 +2,6 @@ include:
   - board: nice_nano//zmk
     shield: osrpey-remix
     artifact-name: osprey-remix-zmk
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano//zmk
     shield: osrpey-remix_dongle
     artifact-name: osprey-remix-dongle
