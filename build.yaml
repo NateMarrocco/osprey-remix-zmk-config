@@ -5,6 +5,5 @@ include:
   - board: nice_nano
     shield: osrpey-remix_dongle
     artifact-name: osprey-remix-dongle
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y -DCONFIG_LOG=y
   - board: nice_nano
     shield: settings_reset
