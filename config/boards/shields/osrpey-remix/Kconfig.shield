@@ -1,2 +1,5 @@
 config SHIELD_OSRPEY_REMIX_DONGLE
     def_bool $(shields_list_contains,osrpey-remix_dongle)
+
+config SHIELD_OSRPEY_REMIX
+    def_bool $(shields_list_contains,osrpey-remix)
