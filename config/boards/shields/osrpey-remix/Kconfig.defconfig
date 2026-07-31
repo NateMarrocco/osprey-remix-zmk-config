@@ -1,31 +1,12 @@
-if SHIELD_OSRPEY_REMIX
-
-config ZMK_KEYBOARD_NAME
-    default "Osprey"
-
-config ZMK_SPLIT
-    default y
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-config BT_MAX_CONN
-    default 6
-
-config BT_MAX_PAIRED
-    default 6
-
-endif
-
 if SHIELD_OSRPEY_REMIX_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Osprey"
 
-config ZMK_SPLIT
+config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_SPLIT_ROLE_CENTRAL
+config ZMK_SPLIT
     default y
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
