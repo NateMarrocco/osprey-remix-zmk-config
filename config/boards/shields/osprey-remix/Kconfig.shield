@@ -1,5 +1,2 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-config SHIELD_OSPREY-REMIX
-    def_bool $(shields_list_contains,my_board)
+config SHIELD_OSPREY_REMIX_DONGLE
+    def_bool $(shields_list_contains,osprey-remix_dongle)
