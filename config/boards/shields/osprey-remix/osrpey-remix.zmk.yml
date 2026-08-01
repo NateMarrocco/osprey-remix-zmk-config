@@ -1,6 +1,6 @@
 file_format: "1"
-id: osrpey-remix
-name: osrpey-remix
+id: osprey-remix
+name: osprey-remix
 type: shield
 url: "kapee1"
 requires: [pro_micro]
