@@ -13,6 +13,12 @@
 #include <zephyr/drivers/watchdog.h>
 #endif
 
+#if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
+#include <zmk/battery.h>
+#include <zmk/event_manager.h>
+#include <zmk/events/battery_state_changed.h>
+#endif
+
 LOG_MODULE_REGISTER(osprey_diag, LOG_LEVEL_INF);
 
 #ifdef CONFIG_WATCHDOG
@@ -101,11 +107,42 @@ static void log_reset_cause(void) {
     hwinfo_clear_reset_cause();
 }
 
+#if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
+
+/* Log whatever the battery module currently has, a couple seconds after boot
+ * so the battery subsystem's own init/first read has already run. */
+static void battery_startup_log_handler(struct k_work *work) {
+    LOG_INF("Battery at boot: %d%%", zmk_battery_state_of_charge());
+}
+
+K_WORK_DELAYABLE_DEFINE(battery_startup_log_work, battery_startup_log_handler);
+
+/* Also log every time ZMK's own periodic/activity-driven battery update
+ * fires, so battery % gets a timestamped entry alongside kscan/reset logs. */
+static int battery_diag_listener(const zmk_event_t *eh) {
+    const struct zmk_battery_state_changed *ev = as_zmk_battery_state_changed(eh);
+    if (ev != NULL) {
+        LOG_INF("Battery update: %d%%", ev->state_of_charge);
+    }
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(osprey_battery_diag, battery_diag_listener);
+ZMK_SUBSCRIPTION(osprey_battery_diag, zmk_battery_state_changed);
+
+#endif /* CONFIG_ZMK_BATTERY_REPORTING */
+
 static int osprey_diag_init(void) {
     log_reset_cause();
 
 #ifdef CONFIG_WATCHDOG
     setup_watchdog();
+#endif
+
+#if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
+    /* Delay a couple seconds so this runs after the battery subsystem's
+     * own SYS_INIT + first immediate reading has completed. */
+    k_work_schedule(&battery_startup_log_work, K_SECONDS(2));
 #endif
 
     return 0;
