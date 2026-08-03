@@ -1,11 +1,11 @@
 include:
-  - board: nice_nano//zmk
+  - board: nice_nano_v2
     shield: osprey-remix
     artifact-name: osprey-remix-zmk
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     snippet: zmk-usb-logging
-  - board: nice_nano//zmk
+  - board: nice_nano_v2
     shield: osprey-remix_dongle
     artifact-name: osprey-remix-dongle
-  - board: nice_nano//zmk
+  - board: nice_nano_v2
     shield: settings_reset
