@@ -109,8 +109,11 @@ static void log_reset_cause(void) {
 
 #if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
 
-/* Log whatever the battery module currently has, a couple seconds after boot
- * so the battery subsystem's own init/first read has already run. */
+/* Log the battery % exactly once, 2 minutes after boot — plenty of time to
+ * open a serial terminal after resetting, without any repeating timer that
+ * would wake the CPU and poll the ADC on an ongoing basis. */
+#define OSPREY_BATTERY_STARTUP_DELAY_SECONDS 120
+
 static void battery_startup_log_handler(struct k_work *work) {
     LOG_INF("Battery at boot: %d%%", zmk_battery_state_of_charge());
 }
@@ -118,7 +121,8 @@ static void battery_startup_log_handler(struct k_work *work) {
 K_WORK_DELAYABLE_DEFINE(battery_startup_log_work, battery_startup_log_handler);
 
 /* Also log every time ZMK's own periodic/activity-driven battery update
- * fires, so battery % gets a timestamped entry alongside kscan/reset logs. */
+ * fires (i.e. when the value actually changes), so battery % gets a
+ * timestamped entry alongside kscan/reset logs. */
 static int battery_diag_listener(const zmk_event_t *eh) {
     const struct zmk_battery_state_changed *ev = as_zmk_battery_state_changed(eh);
     if (ev != NULL) {
@@ -140,9 +144,10 @@ static int osprey_diag_init(void) {
 #endif
 
 #if IS_ENABLED(CONFIG_ZMK_BATTERY_REPORTING)
-    /* Delay a couple seconds so this runs after the battery subsystem's
-     * own SYS_INIT + first immediate reading has completed. */
-    k_work_schedule(&battery_startup_log_work, K_SECONDS(2));
+    /* One-shot: fires once, 2 minutes after this boot/reset, then never
+     * again until the next reset. No ongoing polling or extra battery
+     * drain beyond this single scheduled read. */
+    k_work_schedule(&battery_startup_log_work, K_SECONDS(OSPREY_BATTERY_STARTUP_DELAY_SECONDS));
 #endif
 
     return 0;
